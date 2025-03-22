@@ -1,5 +1,6 @@
 package com.example.tugas2
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,5 +21,15 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
+        binding.loginbtn.setOnClickListener{
+            startActivity(Intent(this,HomeActivity::class.java))
+        }
+
+        binding.forgotpass.setOnClickListener{
+            startActivity(Intent(this,ForgotPassActivity::class.java))
+        }
+        binding.createAccount.setOnClickListener{
+            startActivity(Intent(this,RegisterActivity::class.java))
+        }
     }
 }
